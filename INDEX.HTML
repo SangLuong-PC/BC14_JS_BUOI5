@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <ul
+        class="nav nav-pills mb-3 justify-content-center"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link active"
+            data-toggle="pill"
+            href="#exercise-1"
+            role="tab"
+            aria-selected="true"
+            >Bài 1</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            data-toggle="pill"
+            href="#exercise-2"
+            role="tab"
+            aria-selected="false"
+            >Bài 2</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            data-toggle="pill"
+            href="#exercise-3"
+            role="tab"
+            aria-selected="false"
+            >Bài 3</a
+          >
+        </li>
+        <li class="nav-item" role="presentation">
+          <a
+            class="nav-link"
+            data-toggle="pill"
+            href="#exercise-4"
+            role="tab"
+            aria-selected="false"
+            >Bài 4</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <!-- Bài 1 -->
+        <div class="tab-pane fade show active" id="exercise-1" role="tabpanel">
+          <div class="container">
+            <div class="admissions-manager">
+              <form class="w-50 mx-auto">
+                <h2 class="text-center">Quản Lý Tuyển Sinh</h2>
+                <div class="form-group">
+                  <label for="benchmark">Điểm chuẩn</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Điểm chuẩn*"
+                    id="benchmark"
+                  />
+                  <span id="notificationBenchmark" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label for="scores-1">Điểm môn thứ nhất</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Môn thứ nhất*"
+                    id="scores-1"
+                  />
+                  <span id="notificationScores-1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label for="scores-2">Điểm môn thứ hai</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Môn thứ hai *"
+                    id="scores-2"
+                  />
+                  <span id="notificationScores-2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label for="scores-3">Điểm môn thứ ba</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Môn thứ ba *"
+                    id="scores-3"
+                  />
+                  <span id="notificationScores-3" class="text-danger"></span>
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group">
+                  <label for="areaScores"
+                    >Nhập khu vực ưu tiên (Nhập X nến không nằm trong khu vực ưu
+                    tiên)</label
+                  >
+                  <input
+                    type="text"
+                    id="areaScores"
+                    class="form-control"
+                    placeholder="Khu vực ưu tiên*"
+                  />
+                  <span id="notificationArea" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                  <label for="objectScores"
+                    >Nhập đối tượng ưu tiên (Nhập 0 nến không nằm trong khu vực
+                    ưu tiên)</label
+                  >
+                  <input
+                    type="text"
+                    id="objectScores"
+                    class="form-control"
+                    placeholder="Đối tượng ưu tiên*"
+                  />
+                  <span id="notificationObject" class="text-danger"></span>
+                </div>
+                <button
+                  id="btnResultStudent"
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Kết quả
+                </button>
+                <button class="btn btn-secondary" id="btnReset" type="reset">
+                  Reset
+                </button>
+              </form>
+              <div class="mt-3 w-50 mx-auto">
+                <b id="showResult"></b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="tab-pane fade" id="exercise-2" role="tabpanel">
+          <div class="container">
+            <div class="electricityBill">
+              <form class="w-50 mx-auto">
+                <h2 class="text-center">Tính tiền điện</h2>
+                <div class="form-group">
+                  <label for="username">Họ và tên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tên người dùng"
+                    id="username"
+                  />
+                  <span class="text-danger" id="notificationUsername"></span>
+                </div>
+                <div class="form-group">
+                  <label for="kwUse">Số kw sử dụng</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Số kw sử dụng"
+                    id="kwUse"
+                  />
+                  <span class="text-danger" id="notificationKWUse"></span>
+                </div>
+                <button
+                  class="btn btn-primary"
+                  id="btnTotalAmount"
+                  type="button"
+                >
+                  Tính tiền
+                </button>
+
+                <button class="btn btn-secondary" id="btnReset" type="reset">
+                  Reset
+                </button>
+              </form>
+              <div class="mt-3 w-50 mx-auto">
+                <b id="resultAmount"></b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="tab-pane fade" id="exercise-3" role="tabpanel">
+          <div class="container">
+            <div class="personal-tax">
+              <form class="w-50 mx-auto">
+                <h2>Tính thuế thu nhập cá nhân</h2>
+                <div class="form-group">
+                  <label for="fullName">Họ và tên</label>
+                  <input
+                    class="form-control"
+                    id="fullName"
+                    type="text"
+                    placeholder="Họ tên"
+                  />
+                  <span class="text-danger" id="notifiName"></span>
+                </div>
+                <div class="form-group">
+                  <label for="totalIncome">Tổng thu nhập trên một năm</label>
+                  <input
+                    class="form-control"
+                    id="totalIncome"
+                    type="text"
+                    placeholder="Thu nhập năm"
+                  />
+                  <span class="text-danger" id="notifiIncome"></span>
+                </div>
+                <div class="form-group">
+                  <label for="dependents">Số người phụ thuộc</label>
+                  <input
+                    class="form-control"
+                    id="dependents"
+                    type="text"
+                    placeholder="Người phụ thuộc"
+                  />
+                  <span class="text-danger" id="notifiDependent"></span>
+                </div>
+                <button id="btnResult" type="button" class="btn btn-primary">
+                  Tính Thuế
+                </button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </form>
+              <div class="mt-3 w-50 mx-auto">
+                <b id="resultTax"> </b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div class="tab-pane fade" id="exercise-4" role="tabpanel">
+          <div class="container">
+            <div class="cable-fee">
+              <form class="w-50 mx-auto">
+                <h2 class="text-center">Tính tiền cáp</h2>
+                <div class="form-group">
+                  <label for="customerCode">Mã khách hàng</label>
+                  <input
+                    id="customerCode"
+                    type="text"
+                    class="form-control"
+                    placeholder="Mã khách hàng"
+                  />
+                  <span class="text-danger" id="notificationCode"></span>
+                </div>
+
+                <div class="form-group">
+                  <h6 class="mb-2">Loại khách hàng</h6>
+                  <label for="personal">Nhà dân</label>
+                  <input name="typeServices" id="personal" type="radio" />
+                  <label class="ml-5" for="enterprise">Doanh nghiệp</label>
+                  <input name="typeServices" id="enterprise" type="radio" />
+                  <span
+                    class="d-block text-danger"
+                    id="notificationType"
+                  ></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="connectionNumber">Số kết nối</label>
+                  <input
+                    id="connectionNumber"
+                    type="text"
+                    class="form-control"
+                    placeholder="Số kết nối"
+                  />
+                  <span class="text-danger" id="notificationConnection"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="premiumChannel">Số kênh cao cấp</label>
+                  <input
+                    id="premiumChannel"
+                    type="text"
+                    class="form-control"
+                    placeholder="Số kênh cao cấp"
+                  />
+                  <span class="text-danger" id="notificationPremium"></span>
+                </div>
+
+                <button
+                  id="btnTotalMoney"
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Tính tiền
+                </button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </form>
+              <div class="mt-3 w-50 mx-auto">
+                <b id="resultContent"> </b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./JS/main.js"></script>
+    <script src="./JS/BAI1.js"></script>
+    <script src="./JS/BAI2.js"></script>
+    <script src="./JS/BAI3.js"></script>
+    <script src="./JS/BAI4.js"></script>
+  </body>
+</html>
